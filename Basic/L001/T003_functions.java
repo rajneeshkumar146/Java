@@ -9,8 +9,13 @@ public class T003_functions {
         // String res = GreaterOutOfThreeNumber2();
         // System.out.println("Return res: " + res);
 
-        int inputNumber = scn.nextInt();
-        printTriangle2(inputNumber);
+        // int inputNumber = scn.nextInt();
+        // printTriangle2(inputNumber);
+
+
+        int res = numberOfDigit(scn.nextInt());
+        System.out.println(res);
+
 
     }
 
@@ -127,5 +132,24 @@ public class T003_functions {
                 nsp += 1;
             }
         }
+    }
+
+    public static void hollowDiamond(int N){
+
+    }
+
+    public static int numberOfDigit(int N){
+        if(N < 0){
+            System.err.println("Invalid Number");
+            return -1;
+        }
+
+        int digit = 0;
+        while(N != 0){
+            N /= 10;
+            digit++;
+        }
+
+        return digit;
     }
 }
