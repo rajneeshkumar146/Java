@@ -29,6 +29,35 @@ public class T001_Questions {
         return ans;
     }
 
+    public static int nthFibonacci(int N) {
+        if (N <= 1) {
+            return N;
+        }
+
+        int fib_N_minus_1 = 1;
+        int fib_N_minus_2 = 0;
+        for (int n = 2; n < N; n++) {
+            int ans = fib_N_minus_1 + fib_N_minus_2;
+
+            fib_N_minus_2 = fib_N_minus_1;
+            fib_N_minus_1 = ans;
+        }
+
+        return fib_N_minus_1 + fib_N_minus_2;
+    }
+
+    public static int occurenceOfDigit(int N, int digit) {
+        int count = 0;
+
+        while (N != 0) {
+            int rem = N % 10;
+            if (rem == digit) {
+                count++;
+            }
+        }
+        return count;
+    }
+
     public static int countDigit(int N) {
         int count = 0;
         while (N != 0) {
