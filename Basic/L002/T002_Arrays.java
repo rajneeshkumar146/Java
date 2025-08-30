@@ -11,6 +11,39 @@ public class T002_Arrays {
         int[] arr = { 1, 3, 4, 4, 5, 6, 7, 5, 8, 5, 7, 5, 10, 11 };
     }
 
+    public static int findMaximumNumber(int[] arr){
+        int maximumNumber = Integer.MIN_VALUE;
+        
+        // for (int i = 0; i < arr.length; i++) {
+        //     if (arr[i] > maximumNumber) {
+        //         maximumNumber = arr[i];
+        //     }
+        // }
+        
+        
+        for(int num : arr){
+            maximumNumber = Math.max(maximumNumber, num);
+        }
+
+        return maximumNumber;
+    }
+
+    public static int findMinimumNumber(int[] arr){
+        int minimumNumber = Integer.MIN_VALUE;
+
+        // for (int i = 0; i < arr.length; i++) {
+        //     if (arr[i] < minimumNumber) {
+        //         minimumNumber = arr[i];
+        //     }
+        // }
+
+        for(int num : arr){
+            minimumNumber = Math.min(minimumNumber, num);
+        }
+
+        return minimumNumber;
+    }
+
     public static int findLastIndex(int[] arr, int number) {
         int lastIndex = -1;
         for (int i = 0; i < arr.length; i++) {
