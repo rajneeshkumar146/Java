@@ -1,4 +1,4 @@
-package Java.Java.Basic.L002;
+package L002_Arrays;
 
 public class T001_Questions {
     public static void main(String args[]) {
