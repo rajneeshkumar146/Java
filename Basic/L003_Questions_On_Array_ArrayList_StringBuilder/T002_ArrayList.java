@@ -17,8 +17,7 @@ public class T002_ArrayList {
         // int[] arr = { 1, 2, 3, 4, 4, 4, 4, 5, 6 };
         // int[] ans = removeAllDuplicates(new int[] { 1, 2, 3, 4, 4, 4, 4, 5, 6 });
         // for (int val : ans)
-        //     System.out.print(val + " ");
-
+        // System.out.print(val + " ");
 
         System.out.println(getAllPrimeNumbers(50));
     }
@@ -119,6 +118,26 @@ public class T002_ArrayList {
             }
         }
         return res;
+    }
+
+    public static ArrayList<Integer> getAllPrimeNumbers_2(int N) {
+        ArrayList<Integer> res = new ArrayList<>();
+        for (int num = 2; num <= N; num++) {
+            if (isPrime(num)) {
+                res.add(num);
+            }
+        }
+        return res;
+    }
+
+    private static boolean isPrime(int num) {
+        for (int divisor = 2; divisor <= (int) Math.sqrt(num); divisor++) {
+            if (num % divisor == 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
 }
